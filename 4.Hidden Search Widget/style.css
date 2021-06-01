@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.search{
+    height: 50px;
+    position: relative;
+}
+
+.search .input{
+    height: 50px;
+    width: 50px;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    transition: width 0.3s ease;
+    background-color: #fff;
+    border: 0;
+}
+
+.btn{
+    background-color: #fff;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease;  
+    border: 0;  
+    /* due to border:0 we do not get seaparated icon from the search bar */
+}
+
+.btn:focus,
+.input:focus{
+    outline: none;
+}
+
+.search.active .input{
+    width: 200px;
+}
+.search.active .btn{
+    transform: translateX(198px);
+}
